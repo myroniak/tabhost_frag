@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
         mTabHost = (FragmentTabHost) findViewById(android.R.id.tabhost);
         mTabHost.setup(this, getSupportFragmentManager(), R.id.realtabcontent);
 
-     //   mTabHost.addTab(mTabHost.newTabSpec(TAB_1_TAG).setIndicator("Chat", getResources().getDrawable(R.mipmap.ic_launcher)), ChatFragment.class, null);
-        mTabHost.addTab(mTabHost.newTabSpec(TAB_1_TAG).setIndicator("Chat"), ChatFragment.class, null);
+        mTabHost.addTab(mTabHost.newTabSpec(TAB_1_TAG).setIndicator("Chat", getResources().getDrawable(R.mipmap.ic_launcher)), ChatFragment.class, null);
+       // mTabHost.addTab(mTabHost.newTabSpec(TAB_1_TAG).setIndicator("Chat"), ChatFragment.class, null);
         mTabHost.addTab(mTabHost.newTabSpec(TAB_2_TAG).setIndicator("Trip"), TripFragmentContainer.class, null);
         mTabHost.addTab(mTabHost.newTabSpec(TAB_3_TAG).setIndicator("Item3"), Tab3Fragment.class, null);
         mTabHost.addTab(mTabHost.newTabSpec(TAB_4_TAG).setIndicator("Item4"), Tab4Fragment.class, null);

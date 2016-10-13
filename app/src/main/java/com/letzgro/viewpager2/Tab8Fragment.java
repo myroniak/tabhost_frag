@@ -20,4 +20,5 @@ public class Tab8Fragment extends Fragment {
 
         return rootView;
     }
+
 }
