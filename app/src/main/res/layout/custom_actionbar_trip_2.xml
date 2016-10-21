@@ -13,7 +13,9 @@
         android:layout_alignParentStart="true"
         android:textAllCaps="false"
         android:layout_centerVertical="true"
-        android:text="All trips"/>
+        android:text="All trips"
+        android:background="@null"
+        android:textColor="#a2825b"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -30,6 +32,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:text="Check-in"
-        android:textAllCaps="false"/>
+        android:textAllCaps="false"
+        android:background="@null"
+        android:textColor="#a2825b"/>
 
 </RelativeLayout>

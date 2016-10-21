@@ -29,6 +29,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/button2"
         android:layout_alignParentEnd="true"
-        android:textAllCaps="false"/>
+        android:textAllCaps="false"
+        android:background="@null"
+        android:textColor="#a2825b"/>
 
 </RelativeLayout>
