@@ -6,7 +6,7 @@
                 android:orientation="horizontal">
 
     <Button
-        android:id="@+id/btnChangeEmailCancel"
+        android:id="@+id/btn_all_trip"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -14,29 +14,31 @@
         android:layout_alignParentTop="true"
         android:background="@null"
         android:paddingLeft="-10dp"
-        android:text="CANCEL"
+        android:text="All Trips"
+        android:textAllCaps="false"
         android:textColor="#a2825b"/>
 
     <TextView
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/btnChangeEmail"
-        android:layout_alignBottom="@+id/btnChangeEmail"
+        android:layout_alignBaseline="@+id/btnCheckIn"
+        android:layout_alignBottom="@+id/btnCheckIn"
         android:layout_centerHorizontal="true"
-        android:text="Email"
         android:textColor="#a2825b"
         android:textSize="9pt"/>
 
     <Button
-        android:id="@+id/btnChangeEmail"
+        android:id="@+id/btnCheckIn"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
         android:background="@null"
         android:paddingRight="-10dp"
-        android:text="DONE"
-        android:textColor="#a2825b"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"/>
+        android:text="Check-in"
+        android:textAllCaps="false"
+        android:textColor="#a2825b"/>
 
 </RelativeLayout>

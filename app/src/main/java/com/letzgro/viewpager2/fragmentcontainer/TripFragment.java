@@ -21,12 +21,7 @@ import java.util.ArrayList;
 
 public class TripFragment extends Fragment {
 
-    /**
-     * Define global variables over here
-     */
-    //private ProgressDialog pDialog;
-    String[] names = {"Иван", "Марья", "Петр", "Антон", "Даша", "Борис",
-            "Костя", "Игорь", "Анна", "Денис", "Андрей"};
+
     ArrayList<Trip> mTripArrayList;
     AdapterTrip mAdapterTrip;
 
@@ -36,13 +31,11 @@ public class TripFragment extends Fragment {
 
         View rootView = inflater.inflate(R.layout.tab2_view, container, false);
         customActionBar();
-      /*  Toolbar toolbar = (Toolbar) rootView.findViewById(R.id.toolbar);
-        ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);*/
 
         ListView lvMain = (ListView) rootView.findViewById(R.id.lvMain);
 
         mTripArrayList = new ArrayList<>();
-        mTripArrayList.add(new Trip("TR159681", "Laredo, TX", "Trace, CA", "08/05/16", "08/09/16", "scheduled", 1, 3));
+        mTripArrayList.add(new Trip("TR167631", "Laredo, TX", "Trace, CA", "08/05/16", "08/09/16", "scheduled", 1, 3));
         mTripArrayList.add(new Trip("TR159681", "Laredo, TX", "Trace, CA", "08/05/16", "08/09/16", "in-transit", 2, 5));
         // создаем адаптер
 
@@ -61,7 +54,7 @@ public class TripFragment extends Fragment {
                 TabHostFragment fragment = new TabHostFragment();
                 // if U need to pass some data
                 Bundle bundle = new Bundle();
-
+                bundle.putParcelable("item", mTripArrayList.get(position));
                 fragment.setArguments(bundle);
                 ((BaseContainerFragment) getParentFragment()).replaceFragment(fragment, true);
             }

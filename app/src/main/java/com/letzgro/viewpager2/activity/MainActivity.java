@@ -1,6 +1,7 @@
 package com.letzgro.viewpager2.activity;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.FragmentTabHost;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.letzgro.viewpager2.R;
 import com.letzgro.viewpager2.fragment.BaseContainerFragment;
@@ -26,10 +28,14 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAB_5_TAG = "tab_5";
     private FragmentTabHost mTabHost;
 
+    boolean doubleBackToExitPressedOnce = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
         initView();
     }
 
@@ -53,9 +59,7 @@ public class MainActivity extends AppCompatActivity {
                 continue;
             else
                 tv.setTextSize(10);
-
         }
-
     }
 
     @Override
@@ -78,8 +82,21 @@ public class MainActivity extends AppCompatActivity {
 
         }
         if (!isPopFragment) {
-            finish();
-        }
+            if (doubleBackToExitPressedOnce) {
+                super.onBackPressed();
+                return;
+            }
+
+            this.doubleBackToExitPressedOnce = true;
+            Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+
+            new Handler().postDelayed(new Runnable() {
+
+                @Override
+                public void run() {
+                    doubleBackToExitPressedOnce=false;
+                }
+            }, 2000);        }
     }
 
     public View createTabIndicator(TabHost tabHost, String textResource, int iconResource) {

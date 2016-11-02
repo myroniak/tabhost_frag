@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class TabChronogicalFragment extends Fragment {
+public class TabByLoadsFragment extends Fragment {
 
     /**
      * Define global variables over here
@@ -17,7 +17,7 @@ public class TabChronogicalFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.tab_chronogical_view, container, false);
+        View rootView = inflater.inflate(R.layout.tab_loads_view, container, false);
 
         return rootView;
     }

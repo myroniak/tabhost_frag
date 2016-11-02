@@ -32,11 +32,11 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-//Here TalkDetail is name of class that needs to open
+                //Here TalkDetail is name of class that needs to open
                 EditProfileFragment fragment = new EditProfileFragment();
                 // if U need to pass some data
                 Bundle bundle = new Bundle();
-
+                 //bundle.putSerializable("l",);
                /*     bundle.putString("title", m_ArrayList.get(arg2).title);
                     bundle.putString("largeimg", m_ArrayList.get(arg2).largeimg);
                     bundle.putString("excert", m_ArrayList.get(arg2).excert);
